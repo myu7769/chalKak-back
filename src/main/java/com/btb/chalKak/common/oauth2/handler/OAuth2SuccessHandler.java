@@ -83,14 +83,14 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
             .build()
     );
 
-    Cookie tokenCookie = new Cookie("token", data.toString());
-
-    tokenCookie.setSecure(true);  // Send cookie over HTTPS only
-    tokenCookie.setHttpOnly(true);  // Make cookie accessible only through the HTTP protocol
-    tokenCookie.setPath("/");  // Setting path
-    tokenCookie.setMaxAge(24 * 60 * 60);  // Set expiry date after 24 Hrs
-
-    response.addCookie(tokenCookie);
+//    Cookie tokenCookie = new Cookie("token", data.toString());
+//
+//    tokenCookie.setSecure(true);  // Send cookie over HTTPS only
+//    tokenCookie.setHttpOnly(true);  // Make cookie accessible only through the HTTP protocol
+//    tokenCookie.setPath("/");  // Setting path
+//    tokenCookie.setMaxAge(24 * 60 * 60);  // Set expiry date after 24 Hrs
+//
+//    response.addCookie(tokenCookie);
 
     response.setStatus(HttpStatus.OK.value());
     response.setCharacterEncoding("UTF-8");
